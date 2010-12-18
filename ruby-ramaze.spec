@@ -1,15 +1,15 @@
 Summary:	Ramaze - Web framework
 Name:		ruby-ramaze
-Version:	2008.06
+Version:	2010.04
 Release:	1
 License:	Ruby's
 Group:		Development/Languages
-Source0:	http://gems.rubyforge.org/gems/ramaze-%{version}.gem
-# Source0-md5:	6fde3204df70d34c7969e4bb7143ff97
+Source0:	ramaze-20100612.tar.gz
+# Source0-md5:	3c4f204649b91f2db3243cb5df4f243c
 URL:		http://ramaze.net/
-BuildRequires:	rake
+BuildRequires:	ruby-rake
 BuildRequires:	rpmbuild(macros) >= 1.277
-BuildRequires:	setup.rb = 3.3.1
+BuildRequires:	setup.rb = 3.4.1
 Requires:	ruby-builder
 #BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -18,8 +18,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Ramaze is web framework for Ruby.
 
 %prep
-%setup -q -c
-tar xf %{SOURCE0} -O data.tar.gz | tar xzv-
+%setup -q -n ramaze
 cp %{_datadir}/setup.rb .
 
 %build
@@ -48,4 +47,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc rdoc
 %attr(755,root,root) %{_bindir}/ramaze
 %{ruby_rubylibdir}/ramaze*
+%{ruby_rubylibdir}/vendor*
 %{ruby_rubylibdir}/proto
