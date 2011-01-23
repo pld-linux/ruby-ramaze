@@ -8,7 +8,6 @@ Source0:	http://rubygems.org/downloads/ramaze-%{version}.gem
 # Source0-md5:	751c0884322ae932c525e7938da138b5
 URL:		http://ramaze.net/
 BuildRequires:	rpmbuild(macros) >= 1.277
-BuildRequires:	ruby-rake
 BuildRequires:	setup.rb >= 3.4.1
 Requires:	ruby-builder
 Requires:	ruby-innate
