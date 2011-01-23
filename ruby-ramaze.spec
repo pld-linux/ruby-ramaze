@@ -9,7 +9,7 @@ Source0:	http://rubygems.org/downloads/ramaze-%{version}.gem
 URL:		http://ramaze.net/
 BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-rake
-BuildRequires:	setup.rb = 3.4.1
+BuildRequires:	setup.rb >= 3.4.1
 Requires:	ruby-builder
 Requires:	ruby-innate
 #BuildArch:	noarch
